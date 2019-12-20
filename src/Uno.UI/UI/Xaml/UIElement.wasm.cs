@@ -135,12 +135,12 @@ namespace Windows.UI.Xaml
 
 		protected internal void SetStyle(string name, string value)
 		{
-			Uno.UI.Xaml.WindowManagerInterop.SetStyles(HtmlId, new[] { (name, value) });
+			Uno.UI.Xaml.WindowManagerInterop.SetStyles(HtmlId, new[] { (name, value) }, setAsArranged: false, clipToBounds: RequiresClipping);
 		}
 
 		protected internal void SetStyle(string name, double value)
 		{
-			Uno.UI.Xaml.WindowManagerInterop.SetStyleDouble(HtmlId, name, value);
+			Uno.UI.Xaml.WindowManagerInterop.SetStyleDouble(HtmlId, name, value, requiresClipping: RequiresClipping);
 		}
 
 		protected internal void SetStyle(params (string name, string value)[] styles)
@@ -150,7 +150,7 @@ namespace Windows.UI.Xaml
 				return; // nothing to do
 			}
 
-			Uno.UI.Xaml.WindowManagerInterop.SetStyles(HtmlId, styles);
+			Uno.UI.Xaml.WindowManagerInterop.SetStyles(HtmlId, styles, setAsArranged: false, clipToBounds: RequiresClipping);
 		}
 
 		/// <summary>
@@ -188,7 +188,7 @@ namespace Windows.UI.Xaml
 
 		protected internal void SetNativeTransform(Matrix3x2 matrix)
 		{
-			Uno.UI.Xaml.WindowManagerInterop.SetElementTransform(HtmlId, matrix);
+			Uno.UI.Xaml.WindowManagerInterop.SetElementTransform(HtmlId, matrix, requiresClipping: RequiresClipping);
 		}
 
 		protected internal void ResetStyle(params string[] names)
