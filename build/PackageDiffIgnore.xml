@@ -508,6 +508,12 @@
 					fullName="Windows.Foundation.IAsyncOperation`1&lt;Windows.Devices.Geolocation.GeolocationAccessStatus&gt; Windows.Devices.Geolocation.Geolocator.RequestAccessAsync()"
 					reason="Aligned API" />
 
+				<Member
+					fullName="CoreGraphics.CGSize Windows.UI.Xaml.Controls.VirtualizingPanelLayout.GetItemSizeForIndexPath(Foundation.NSIndexPath indexPath)"
+					reason="Made internal, shouldn't normally be called by consumer code"/>
+				<Member
+					fullName="CoreGraphics.CGSize Windows.UI.Xaml.Controls.ListViewBaseSource.GetItemSize(UIKit.UICollectionView collectionView, Foundation.NSIndexPath indexPath)"
+					reason="Made internal, shouldn't normally be called by consumer code"/>
             </Methods>
 			
 			<Fields>
