@@ -7,6 +7,8 @@
 - Add support for `Grid.ColumnSpacing` and `Grid.RowSpacing`
 - Add clarification in [documentation](../articles/uno-development/working-with-the-samples-apps.md) for adding automated UI tests
 - Add support for `Popup.LightDismissOverlayMode`, as well as `DatePicker.LightDismissOverlayMode` and `Flyout.LightDismissOverlayMode`
+- `TransformToVisual` now returns a real transform to convert coordinates between views (was only returning a translate transform to offset the origin of controls)
+
 
 ### Breaking changes
 -
@@ -21,6 +23,7 @@
 - #2287 Vertical `ListView` containing a horizontal `ScrollViewer`: horizontal scrolling is difficult, only works when the gesture is perfectly horizontal
 - #2130 Grid - fix invalid measure when total star size is 0
 - [iOS] Fix invalid image measure on constrained images with `Margin`
+- `ViewBox` no longer alters its child's `RenderTransform`
 
 ## Release 2.0
 
